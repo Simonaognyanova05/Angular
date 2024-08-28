@@ -32,7 +32,7 @@ var DreamCar = /** @class */ (function (_super) {
     }
     ;
     DreamCar.prototype.printDream = function () {
-        console.log(_super.prototype.drive.call(this) + "My Dream is ".concat(this.model, " ").concat(this.brand));
+        console.log(_super.prototype.drive.call(this) + " My Dream is ".concat(this.model, " ").concat(this.brand));
     };
     return DreamCar;
 }(Car));
