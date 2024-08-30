@@ -4,8 +4,12 @@
     <li *ngFor="let game of games">
         Game: {{game.title}}
 
-        <span *ngIf="game.price > 10">
+        <span [class.game-price]="isTrue" *ngIf="game.price > 10">
             Price: {{game.price}}
+        </span>
+
+        <span>
+            <img [src]="game.img" alt="imgUrl">
         </span>
     </li>
 </ul>
