@@ -21,7 +21,6 @@ export class GameComponent {
     ];
 
     clickHandler(): void {
-        alert('Button is clicked');
-        this.isTrue = true;
+        this.isTrue = this.isTrue ? false : true;
     }
 }
