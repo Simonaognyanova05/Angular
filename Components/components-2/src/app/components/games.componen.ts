@@ -13,7 +13,11 @@ interface Game {
 export class GameComponent {
     games: Game[] = [
         { title: 'Minecraft', price: 10 },
-        { title: 'Super Mario', price: 20  },
-        { title: 'Conter Strike', price: 15  },
-    ]
+        { title: 'Super Mario', price: 20 },
+        { title: 'Conter Strike', price: 15 },
+    ];
+
+    clickHandler(): void {
+        alert('Button is clicked');
+    }
 }
