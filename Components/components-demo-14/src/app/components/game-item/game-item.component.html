@@ -1,0 +1,11 @@
+<div>
+    Game: {{game?.title}}
+
+    <span *ngIf="game.price > 10">
+        Price: {{game.price}}
+    </span>
+
+    <span>
+        <img [src]="game.img" alt="imgUrl">
+    </span>
+</div>

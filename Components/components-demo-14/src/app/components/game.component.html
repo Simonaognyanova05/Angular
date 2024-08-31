@@ -6,15 +6,8 @@
 
 <ul #gameContainer>
     <li *ngFor="let game of games">
-        Game: {{game?.title}}
-
-        <span [class.game-price]="isTrue" *ngIf="game.price > 10">
-            Price: {{game.price}}
-        </span>
-
-        <span>
-            <img [src]="game.img" alt="imgUrl">
-        </span>
+        <game-item [game]="game"></game-item>
+        
     </li>
 </ul>
 

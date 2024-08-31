@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GameComponent } from './components/games.componen';
 import { FormsModule } from '@angular/forms';
+import { GameItemComponent } from './components/game-item/game-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GameComponent
+    GameComponent,
+    GameItemComponent
   ],
   imports: [
     BrowserModule,

@@ -13,7 +13,7 @@ interface Game {
 
 export class GameComponent {
     isTrue: boolean = false;
-    searchText: string = 'Game 123';
+    searchText: string = 'Game 1';
 
     games: Game[] = [
         { price: 10, img: '' },
