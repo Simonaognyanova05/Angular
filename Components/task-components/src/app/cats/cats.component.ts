@@ -1,5 +1,10 @@
 import { Component } from "@angular/core";
 
+interface Cats{
+    name: string,
+    breed: string,
+    age: number
+}
 @Component({
     selector: 'cats',
     templateUrl: './cats.component.html',
@@ -7,5 +12,8 @@ import { Component } from "@angular/core";
 })
 
 export class Cat{
-
+    cats: Cats[] = [
+        {name: 'Maxi', breed: 'Super cat', age: 1},
+        {name: 'Mishi', breed: 'Woman', age: 3},
+    ]
 }
