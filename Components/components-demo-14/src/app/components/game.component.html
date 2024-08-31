@@ -1,8 +1,12 @@
 <h2>Game temlate is working!</h2>
 
-<ul>
+<input type="text" [(ngModel)]="searchText" (change)="changeHandler($event)">
+
+<p>Searched Text: {{searchText}}</p>
+
+<ul #gameContainer>
     <li *ngFor="let game of games">
-        Game: {{game.title}}
+        Game: {{game?.title}}
 
         <span [class.game-price]="isTrue" *ngIf="game.price > 10">
             Price: {{game.price}}
@@ -13,6 +17,10 @@
         </span>
     </li>
 </ul>
+
+<div>
+    Total: {{gameContainer.children.length}}
+</div>
 
 <button (click)="clickHandler()">
     {{isTrue ? 'Make black' : 'Make green'}}

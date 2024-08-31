@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 
 interface Game {
-    title: string,
+    title?: string,
     price: number,
     img: string
 }
@@ -13,9 +13,10 @@ interface Game {
 
 export class GameComponent {
     isTrue: boolean = false;
+    searchText: string = 'Game 123';
 
     games: Game[] = [
-        { title: 'Minecraft', price: 10, img: '' },
+        { price: 10, img: '' },
         { title: 'Super Mario', price: 20, img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbpoC6b7Pevx4nu9xqt_Xr4hsBYvyfXDyRlw&s' },
         { title: 'Conter Strike', price: 15, img: '' },
     ];
@@ -23,4 +24,9 @@ export class GameComponent {
     clickHandler(): void {
         this.isTrue = this.isTrue ? false : true;
     }
+
+    changeHandler(event: Event){
+        console.log(event);
+        
+    } 
 }
