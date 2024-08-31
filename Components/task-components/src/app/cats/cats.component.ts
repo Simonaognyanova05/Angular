@@ -3,7 +3,8 @@ import { Component } from "@angular/core";
 interface Cats{
     name: string,
     breed: string,
-    age: number
+    age: number,
+    img: string,
 }
 @Component({
     selector: 'cats',
@@ -13,7 +14,7 @@ interface Cats{
 
 export class Cat{
     cats: Cats[] = [
-        {name: 'Maxi', breed: 'Super cat', age: 1},
-        {name: 'Mishi', breed: 'Woman', age: 3},
+        {name: 'Maxi', breed: 'Super cat', age: 1, img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSzV5hbZ57XgAywew5lj-PbgvY4-WR2hmQTA&s'},
+        {name: 'Mishi', breed: 'Woman', age: 3, img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQre8U4qd9PSAtqTZpGnJW7u9BlUC-RqmaC5Q&s'},
     ]
 }

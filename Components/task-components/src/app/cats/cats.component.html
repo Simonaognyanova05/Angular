@@ -2,6 +2,8 @@
 
 <ul>
     <li *ngFor="let cat of cats">
-        {{cat.name}}, {{cat.breed}} <span *ngIf="cat.age < 3">, {{cat.age}}</span>
+        {{cat.name}}, {{cat.breed}}
+        <span *ngIf="cat.age < 3">, {{cat.age}}</span>
+        <img [src]="cat.img" alt="cat image"/>
     </li>
 </ul>
