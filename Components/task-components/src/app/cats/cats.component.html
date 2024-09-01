@@ -2,9 +2,9 @@
 
 <ul #numOfCatComponents>
     <li *ngFor="let cat of cats">
-        {{cat.name}}, {{cat.breed}}
+        {{cat.name}}, {{cat.breed ? cat.breed : 'No breed'}}
         <span [class.colored]="isTrue" *ngIf="cat.age < 3">, {{cat.age}}</span>
-        <img [src]="cat.img" alt="cat image"/>
+        <img [src]="cat.img" alt="cat image" />
     </li>
 </ul>
 
