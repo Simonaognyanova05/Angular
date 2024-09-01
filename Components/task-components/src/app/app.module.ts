@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Cat } from './cats/cats.component';
 import { FormsModule } from '@angular/forms';
+import { CatItem } from './cats/cat-item/cat-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    Cat
+    Cat,
+    CatItem
   ],
   imports: [
     BrowserModule,

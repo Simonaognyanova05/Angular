@@ -5,9 +5,7 @@
 <p>Searched text: {{searchText}}</p>
 <ul #numOfCatComponents>
     <li *ngFor="let cat of cats">
-        {{cat.name}}, {{cat.breed ? cat.breed : 'No breed'}}
-        <span [class.colored]="isTrue" *ngIf="cat.age < 3">, {{cat.age}}</span>
-        <img [src]="cat.img" alt="cat image" />
+        <cat-item [cat]="cat"></cat-item>
     </li>
 </ul>
 

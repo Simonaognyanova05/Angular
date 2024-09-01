@@ -1,0 +1,5 @@
+<div>
+    {{cat.name}}, {{cat.breed ? cat.breed : 'No breed'}}
+    <span *ngIf="cat.age < 3">, {{cat.age}}</span>
+    <img [src]="cat.img" alt="cat image" />
+</div>
