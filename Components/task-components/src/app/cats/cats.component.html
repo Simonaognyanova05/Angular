@@ -1,12 +1,14 @@
 <h1>These are my cars</h1>
 
-<ul>
+<ul #numOfCatComponents>
     <li *ngFor="let cat of cats">
         {{cat.name}}, {{cat.breed}}
         <span [class.colored]="isTrue" *ngIf="cat.age < 3">, {{cat.age}}</span>
         <img [src]="cat.img" alt="cat image"/>
     </li>
 </ul>
+
+<p>Total cats: {{numOfCatComponents.children.length}}</p>
 
 <button (click)="changeColorHandler()">
     Change color
