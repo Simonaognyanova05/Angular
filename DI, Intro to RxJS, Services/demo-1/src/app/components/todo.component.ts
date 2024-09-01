@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 
 
-interface TodoInter {
+export interface TodoInter {
     title: string,
     isDone: boolean,
 }
@@ -19,9 +19,9 @@ export class Todo {
         { title: 'Write new English words', isDone: false },
     ];
 
-    clickHandler(todoToChange: TodoInter): void {
-        todoToChange.isDone = !todoToChange.isDone;
-    };
+    // clickHandler(todoToChange: TodoInter): void {
+    //     todoToChange.isDone = !todoToChange.isDone;
+    // };
 
     markAllHandler(): void {
         for (let todo of this.todos) {
