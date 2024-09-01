@@ -1,5 +1,8 @@
 <h1>These are my cars</h1>
 
+<input type="text" [(ngModel)]="searchText" (change)="changeHandler($event)">
+
+<p>Searched text: {{searchText}}</p>
 <ul #numOfCatComponents>
     <li *ngFor="let cat of cats">
         {{cat.name}}, {{cat.breed ? cat.breed : 'No breed'}}

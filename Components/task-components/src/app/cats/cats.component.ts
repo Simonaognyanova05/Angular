@@ -14,6 +14,7 @@ interface Cats {
 
 export class Cat {
     isTrue: boolean = false;
+    searchText: string = 'Cat';
 
     cats: Cats[] = [
         { name: 'Maxi', breed: '', age: 1, img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSzV5hbZ57XgAywew5lj-PbgvY4-WR2hmQTA&s' },
@@ -22,5 +23,10 @@ export class Cat {
 
     changeColorHandler(): void {
         this.isTrue = this.isTrue ? false : true;
+    };
+
+    changeHandler(event: Event){
+        console.log(event);
+        
     }
 }
