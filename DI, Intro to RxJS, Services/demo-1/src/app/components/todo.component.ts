@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 
 
-interface TodoInter{
+interface TodoInter {
     title: string,
     isDone: boolean,
 }
@@ -10,16 +10,22 @@ interface TodoInter{
     templateUrl: './todo.component.html'
 })
 
-export class Todo{
+export class Todo {
     isDone: boolean = false;
 
     todos: TodoInter[] = [
-        {title: 'Go to shop', isDone: false},
-        {title: 'Learn Angular', isDone: true},
-        {title: 'Write new English words', isDone: false},
+        { title: 'Go to shop', isDone: false },
+        { title: 'Learn Angular', isDone: true },
+        { title: 'Write new English words', isDone: false },
     ];
 
-    clickHandler(todoToChange: TodoInter): void{
+    clickHandler(todoToChange: TodoInter): void {
         todoToChange.isDone = !todoToChange.isDone;
+    };
+
+    markAllHandler(): void {
+        for (let todo of this.todos) {
+            todo.isDone = true;
+        }
     }
 }

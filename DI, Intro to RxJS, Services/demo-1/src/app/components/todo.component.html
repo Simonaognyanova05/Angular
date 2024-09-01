@@ -1,5 +1,9 @@
-<div *ngFor="let todo of todos">
 
+<button (click)="markAllHandler()">
+    Mark all as done
+</button>
+
+<div *ngFor="let todo of todos">
     <span>
         {{todo.title}}
     </span>
