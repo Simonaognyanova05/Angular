@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { TodoServiceService } from "../todo-service.service";
 
 
 export interface TodoInter {
@@ -18,6 +19,10 @@ export class Todo {
         { title: 'Learn Angular', isDone: true },
         { title: 'Write new English words', isDone: false },
     ];
+
+    constructor(private todoService: TodoServiceService) {
+
+    }
 
     // clickHandler(todoToChange: TodoInter): void {
     //     todoToChange.isDone = !todoToChange.isDone;
