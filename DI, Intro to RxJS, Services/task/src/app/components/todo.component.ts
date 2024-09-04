@@ -23,5 +23,10 @@ export class TodoComponent {
         for (let todo of this.todos) {
             todo.isDone = true;
         }
+    };
+    markAll(): void {
+        for (let todo of this.todos) {
+            todo.isDone = false;
+        }
     }
 }
