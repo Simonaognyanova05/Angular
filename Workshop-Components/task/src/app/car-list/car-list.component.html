@@ -5,3 +5,12 @@
         {{car.brand}} - {{car.model}} - {{car.year}}
     </li>
 </ul>
+
+<div *ngIf="isLogin">
+    <a (click)="logoutHandler()">Logout</a>
+</div>
+
+<div *ngIf="!isLogin">
+
+    <a (click)="loginHandler()">Login</a> 
+</div>

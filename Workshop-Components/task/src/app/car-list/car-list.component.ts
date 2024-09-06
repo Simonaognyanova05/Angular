@@ -7,6 +7,7 @@ import { CarsService } from '../cars.service';
   styleUrls: ['./car-list.component.css']
 })
 export class CarListComponent {
+  isLogin = false;
   cars: any;
 
   constructor(private carService: CarsService) { }
@@ -17,4 +18,10 @@ export class CarListComponent {
     })
   }
 
+  loginHandler(): void {
+    this.isLogin = true;
+  }
+  logoutHandler(): void {
+    this.isLogin = false;
+  }
 }
