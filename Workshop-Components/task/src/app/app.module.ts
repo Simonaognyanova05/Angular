@@ -4,11 +4,13 @@ import {HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { CarListComponent } from './car-list/car-list.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CarListComponent
+    CarListComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
