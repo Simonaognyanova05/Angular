@@ -1,1 +1,5 @@
 <h1>Home</h1>
+
+<ul>
+    <li *ngFor="let car of cars">{{car.brand}} - <a [routerLink]="['/car', car.id]">Details</a></li>
+</ul>
