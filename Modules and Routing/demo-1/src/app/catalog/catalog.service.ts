@@ -12,4 +12,8 @@ export class CatalogService {
   getData(): Observable<any>{
     return this.httpClient.get('http://localhost:3000/cars');
   }
+
+  getSpecificData(carId: string): Observable<any>{
+    return this.httpClient.get(`http://localhost:3000/cars/${carId}`);
+  }
 }
