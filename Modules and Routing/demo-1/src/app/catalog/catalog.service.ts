@@ -10,6 +10,6 @@ export class CatalogService {
   constructor(private httpClient: HttpClient) { }
 
   getData(): Observable<any>{
-    return this.httpClient.get('http://loaclhost:3000/cars');
+    return this.httpClient.get('http://localhost:3000/cars');
   }
 }
