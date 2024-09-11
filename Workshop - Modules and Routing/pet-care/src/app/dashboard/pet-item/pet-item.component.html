@@ -5,6 +5,6 @@
     <h2 class="name">{{pet.name}}</h2>
     <h3 class="breed">{{pet.breed}}</h3>
     <div class="action">
-        <a class="btn" routerLink="/details">Details</a>
+        <a class="btn" [routerLink]="['/details', pet._id]">Details</a>
     </div>
 </div>
