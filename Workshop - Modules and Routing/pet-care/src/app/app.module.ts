@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { EditComponent } from './edit/edit.component';
 import { DetailsComponent } from './details/details.component';
 import { HeaderComponent } from './header/header.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { PetItemComponent } from './dashboard/pet-item/pet-item.component';
 
 @NgModule({
   declarations: [
@@ -24,10 +26,12 @@ import { NotFoundComponent } from './not-found/not-found.component';
     EditComponent,
     DetailsComponent,
     HeaderComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    PetItemComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
