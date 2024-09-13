@@ -1,0 +1,27 @@
+<form (ngSubmit)="onSubmit()" class="row g-3" [formGroup]="laptopGroup">
+    <div class="col-md-6">
+        <label for="processor" class="form-label">Proccessor</label>
+        <input type="text" class="form-control" id="processor" required formControlName="processor">
+
+        <ng-container *ngIf="laptopGroup.controls['processor'].touched && laptopGroup.controls['processor'].invalid">
+            <p>Invalid text!</p>
+        </ng-container>
+    </div>
+    <div class="col-md-6">
+        <label for="ram" class="form-label">RAM</label>
+        <input type="text" class="form-control" id="ram" required formControlName="ram">
+    </div>
+    <div class="col-12">
+        <label for="hardDisk" class="form-label">Hard Disk</label>
+        <input type="text" class="form-control" id="hardDisk"
+            required formControlName="hardDisk">
+    </div>
+    <div class="col-12">
+        <label for="os" class="form-label">OS</label>
+        <input type="text" class="form-control" id="os"
+            required formControlName="os">
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Sign in</button>
+    </div>
+</form>
