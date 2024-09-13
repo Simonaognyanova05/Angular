@@ -18,9 +18,9 @@ export class FormsDemoComponent implements OnInit {
 
   ngAfterViewInit(): void {
   }
-  submitHandler(): void{
+  submitHandler(): void {
     console.log(this.laptop.value);
-
+    this.laptop.reset();
   }
 
 }
