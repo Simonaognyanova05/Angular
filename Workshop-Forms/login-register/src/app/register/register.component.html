@@ -1,5 +1,13 @@
 <form (ngSubmit)="onRegister()" [formGroup]="profileGroup">
-    <input type="text" formControlName="email">
-    <input type="password" formControlName="password">
+    <div>
+        <input type="text" formControlName="email">
+    </div>
+    <div>
+        <input type="password" formControlName="password">
+
+        <ng-container *ngIf="profileGroup.controls['password'].touched && profileGroup.controls['password'].invalid">
+            <p>Password must be minimum 6 symbols!</p>
+        </ng-container>
+    </div>
     <input type="submit" value="Register">
 </form>

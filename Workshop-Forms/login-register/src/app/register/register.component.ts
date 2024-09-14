@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { RegisterService } from './register.service';
 
 @Component({
@@ -11,7 +11,7 @@ export class RegisterComponent implements OnInit {
 
   profileGroup: FormGroup = this.formBuilder.group({
     email: new FormControl('', [], []),
-    password: new FormControl('', [], []),
+    password: new FormControl('', [Validators.required, Validators.minLength(6)], []),
   })
   constructor(private formBuilder: FormBuilder, private registerService: RegisterService) { }
 
